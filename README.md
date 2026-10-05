@@ -9,7 +9,7 @@ The application converts machine learning predictions into a simple user experie
 # 🚀 Live Demo
 
 ```
-https://california-house-price-predictor-ml-model.streamlit.app/
+https://suhanijaiswal046-california-house-price-prediction--app-vjkdbs.streamlit.app/
 ```
 
 ---
