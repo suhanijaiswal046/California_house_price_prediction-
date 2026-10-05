@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>California AI House Price Predictor</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/4adf4f0f2f.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- HEADER -->
+    <!-- ========================= -->
+
+    <header>
+
+        <div class="logo">
+
+            🏡 <span>California AI</span>
+
+        </div>
+
+        <nav>
+
+            <a href="#">Dashboard</a>
+
+            <a href="#">Prediction</a>
+
+            <a href="#">Analytics</a>
+
+            <a href="#">Insights</a>
+
+        </nav>
+
+        <button class="login-btn">
+
+            AI Model v1.0
+
+        </button>
+
+    </header>
+
+    <!-- ========================= -->
+    <!-- HERO -->
+    <!-- ========================= -->
+
+    <section class="hero">
+
+        <div class="hero-left">
+
+            <h1>
+
+                Predict California House Prices
+                using Artificial Intelligence
+
+            </h1>
+
+            <p>
+
+                Estimate residential property values using a machine learning
+                model trained on California Housing data.
+
+                Get intelligent predictions, analytics and insights in seconds.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="primary">
+
+                    Start Prediction
+
+                </button>
+
+                <button class="secondary">
+
+                    Learn More
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="hero-right">
+
+            <div class="glass-card">
+
+                <h3>AI Prediction Engine</h3>
+
+                <p>
+
+                    ✔ Machine Learning
+
+                </p>
+
+                <p>
+
+                    ✔ Scikit-Learn Model
+
+                </p>
+
+                <p>
+
+                    ✔ Real-time Prediction
+
+                </p>
+
+                <p>
+
+                    ✔ Interactive Dashboard
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- KPI CARDS -->
+    <!-- ========================= -->
+
+    <section class="stats">
+
+        <div class="stat-card">
+
+            <h2>95%</h2>
+
+            <p>Prediction Accuracy</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2>20K+</h2>
+
+            <p>Training Records</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2>8</h2>
+
+            <p>Input Features</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2>AI</h2>
+
+            <p>Powered Prediction</p>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- MAIN DASHBOARD -->
+    <!-- ========================= -->
+
+    <section class="dashboard">
+
+        <!-- LEFT -->
+
+        <div class="input-panel">
+
+            <div class="card-title">
+
+                <h2>
+
+                    Property Information
+
+                </h2>
+
+                <p>
+
+                    Fill in the property details.
+
+                </p>
+
+            </div>
+
+            <form action="/predict" method="POST">
+
+                <div class="grid">
+
+                    <div class="input-group">
+
+                        <label>
+
+                            💰 Median Income
+
+                        </label>
+
+                        <input type="number" step="any" name="MedInc" placeholder="Example: 8.25">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>
+
+                            🏠 House Age
+
+                        </label>
+
+                        <input type="number" step="any" name="HouseAge" placeholder="Example: 25">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>
+
+                            🛋 Average Rooms
+
+                        </label>
+
+                        <input type="number" step="any" name="AveRooms" placeholder="Example: 6.2">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>
+
+                            🛏 Average Bedrooms
+
+                        </label>
+
+                        <input type="number" step="any" name="AveBedrms" placeholder="Example: 1.1">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>
+
+                            👨‍👩‍👧 Population
+
+                        </label>
+
+                        <input type="number" step="any" name="Population" placeholder="Example: 1500">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>
+
+                            👥 Average Occupancy
+
+                        </label>
+
+                        <input type="number" step="any" name="AveOccup" placeholder="Example: 3.2">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>
+
+                            📍 Latitude
+
+                        </label>
+
+                        <input type="number" step="any" name="Latitude" placeholder="Example: 37.88">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>
+
+                            📍 Longitude
+
+                        </label>
+
+                        <input type="number" step="any" name="Longitude" placeholder="Example: -122.23">
+
+                    </div>
+
+                </div>
+
+                <button class="predict-btn">
+
+                    🚀 Predict House Price
+
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="prediction-panel">
+
+            <div class="prediction-card">
+
+                <span class="badge">
+
+                    AI Prediction
+
+                </span>
+
+                <h2>
+
+                    Estimated Market Value
+
+                </h2>
+
+                <div class="price">
+
+                    {% if prediction %}
+
+                    $ {{ "{:,.2f}".format(prediction) }}
+
+                    {% else %}
+
+                    $0.00
+
+                    {% endif %}
+
+                </div>
+
+                <div class="confidence">
+
+                    <div class="bar">
+
+                        <div class="fill"></div>
+
+                    </div>
+
+                    <p>
+
+                        Confidence Score : 92%
+
+                    </p>
+
+                </div>
+
+                <div class="summary">
+
+                    <h3>
+
+                        AI Summary
+
+                    </h3>
+
+                    <p>
+
+                        This property is estimated using our machine learning
+                        model trained on California housing data.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===== PART 1 ENDS HERE ===== -->
+
+    <!-- ========================= -->
+    <!-- ANALYTICS -->
+    <!-- ========================= -->
+
+    <section class="analytics">
+
+        <div class="section-title">
+
+            <h2>📊 Property Analytics</h2>
+
+            <p>
+                AI generated analysis based on your property information.
+            </p>
+
+        </div>
+
+        <div class="analytics-grid">
+
+            <div class="analytics-card">
+
+                <h3>Income Score</h3>
+
+                <div class="big-number">
+
+                    8.50
+
+                </div>
+
+                <p>
+
+                    Higher median income generally increases
+                    the predicted property value.
+
+                </p>
+
+            </div>
+
+            <div class="analytics-card">
+
+                <h3>Property Quality</h3>
+
+                <div class="big-number">
+
+                    A+
+
+                </div>
+
+                <p>
+
+                    Based on rooms, bedrooms and house age.
+
+                </p>
+
+            </div>
+
+            <div class="analytics-card">
+
+                <h3>Neighborhood</h3>
+
+                <div class="big-number">
+
+                    Excellent
+
+                </div>
+
+                <p>
+
+                    Population and occupancy indicate
+                    a stable residential region.
+
+                </p>
+
+            </div>
+
+            <div class="analytics-card">
+
+                <h3>Investment Score</h3>
+
+                <div class="big-number">
+
+                    92%
+
+                </div>
+
+                <p>
+
+                    Suitable for long-term investment.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- CHARTS -->
+    <!-- ========================= -->
+
+    <section class="charts">
+
+        <div class="section-title">
+
+            <h2>📈 Data Visualization</h2>
+
+            <p>
+
+                Interactive analytics dashboard
+
+            </p>
+
+        </div>
+
+        <div class="chart-grid">
+
+            <div class="chart-card">
+
+                <h3>Feature Importance</h3>
+
+                <div class="chart-placeholder">
+
+                    📊
+
+                    <span>
+
+                        Plotly Bar Chart
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="chart-card">
+
+                <h3>Input Distribution</h3>
+
+                <div class="chart-placeholder">
+
+                    📈
+
+                    <span>
+
+                        Radar Chart
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- MAP -->
+    <!-- ========================= -->
+
+    <section class="map-section">
+
+        <div class="section-title">
+
+            <h2>
+
+                🗺 California Location
+
+            </h2>
+
+            <p>
+
+                Visualize the property location.
+
+            </p>
+
+        </div>
+
+        <div class="map-card">
+
+            <div class="map-placeholder">
+
+                📍
+
+                <h3>
+
+                    Interactive Map
+
+                </h3>
+
+                <p>
+
+                    Google Maps / Leaflet / Folium
+                    can be integrated here.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- AI INSIGHTS -->
+    <!-- ========================= -->
+
+    <section class="insights">
+
+        <div class="section-title">
+
+            <h2>
+
+                🤖 AI Insights
+
+            </h2>
+
+        </div>
+
+        <div class="insight-card">
+
+            <h3>
+
+                Prediction Summary
+
+            </h3>
+
+            <ul>
+
+                <li>
+
+                    ✔ Strong median income positively affects price.
+
+                </li>
+
+                <li>
+
+                    ✔ More rooms increase estimated value.
+
+                </li>
+
+                <li>
+
+                    ✔ Population density has moderate influence.
+
+                </li>
+
+                <li>
+
+                    ✔ Location coordinates are within California.
+
+                </li>
+
+                <li>
+
+                    ✔ Overall prediction confidence is high.
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- FOOTER -->
+    <!-- ========================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <h3>
+
+                    🏡 California AI
+
+                </h3>
+
+                <p>
+
+                    Smart House Price Prediction using
+                    Artificial Intelligence.
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <h4>
+
+                    Technologies
+
+                </h4>
+
+                <p>
+
+                    Python
+
+                </p>
+
+                <p>
+
+                    Flask
+
+                </p>
+
+                <p>
+
+                    Scikit-Learn
+
+                </p>
+
+                <p>
+
+                    HTML & CSS
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <h4>
+
+                    Features
+
+                </h4>
+
+                <p>
+
+                    Machine Learning
+
+                </p>
+
+                <p>
+
+                    AI Dashboard
+
+                </p>
+
+                <p>
+
+                    Analytics
+
+                </p>
+
+                <p>
+
+                    Responsive Design
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+
+            © 2026 California AI House Price Predictor.
+            Built with ❤️ using Machine Learning.
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
